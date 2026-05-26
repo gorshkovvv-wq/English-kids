@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English for IT: Speak & Get Hired — интенсив с Владиславом</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f7;
+            color: #0b0b1a;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(ellipse at 30% 40%, #0a0a1a 0%, #020210 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            top: -300px; left: -150px;
+            animation: float 12s infinite alternate ease-in-out;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+            bottom: -250px; right: -100px;
+            animation: float 15s infinite alternate-reverse ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -30px) scale(1.05); }
+        }
+        .hero .container {
+            position: relative; z-index: 2;
+            display: flex; flex-wrap: wrap; align-items: center; gap: 50px;
+        }
+        .hero-content { flex: 1 1 500px; }
+        .hero-badge {
+            display: inline-block; background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(15px); padding: 10px 24px; border-radius: 40px;
+            font-size: 0.9rem; color: #cbd5e1; margin-bottom: 28px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .hero h1 {
+            font-size: clamp(3.2rem, 6vw, 4.8rem); font-weight: 800;
+            line-height: 1.08; letter-spacing: -0.02em; color: #ffffff;
+            margin-bottom: 24px;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.25rem; color: #94a3b8; max-width: 480px; margin-bottom: 36px;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 18px 42px; font-size: 1.1rem; font-weight: 600;
+            border-radius: 16px; text-decoration: none; transition: all 0.3s;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: #fff; box-shadow: 0 12px 30px rgba(79, 70, 229, 0.5);
+            border: none; cursor: pointer;
+        }
+        .btn:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(79, 70, 229, 0.6); }
+        .hero-visual {
+            flex: 1 1 420px; display: flex; justify-content: center; align-items: center;
+        }
+        .hero-visual img { max-width: 100%; border-radius: 32px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+
+        /* SECTIONS */
+        section { padding: 100px 0; }
+        .section-title {
+            font-size: 2.8rem; font-weight: 700; text-align: center;
+            letter-spacing: -0.01em; margin-bottom: 18px;
+            background: linear-gradient(135deg, #1e3a5f, #312e81);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle { text-align: center; font-size: 1.15rem; color: #475569; margin-bottom: 60px; }
+
+        /* CARDS */
+        .grid-3 {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .card {
+            background: rgba(255,255,255,0.85); backdrop-filter: blur(18px);
+            border-radius: 30px; padding: 40px 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(255,255,255,0.9);
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-12px); box-shadow: 0 30px 45px rgba(0,0,0,0.06); }
+        .card-icon {
+            width: 64px; height: 64px; background: #e0e7ff; border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.2rem; margin-bottom: 22px;
+        }
+        .card h3 { font-size: 1.4rem; margin-bottom: 10px; font-weight: 600; color: #1e1b4b; }
+
+        /* STEPS */
+        .steps-grid {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 28px;
+        }
+        .step-card {
+            background: white; border-radius: 32px; padding: 36px 28px;
+            flex: 1 1 250px; max-width: 320px; text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+        }
+        .step-number {
+            width: 48px; height: 48px; background: #e0e7ff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-weight: 700; font-size: 1.4rem;
+            color: #4f46e5;
+        }
+
+        /* ACCORDION */
+        .accordion { max-width: 860px; margin: 0 auto; }
+        .accordion-item {
+            background: white; border-radius: 24px; margin-bottom: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.02); overflow: hidden;
+        }
+        .accordion-header {
+            width: 100%; text-align: left; padding: 24px 30px; font-weight: 600;
+            font-size: 1.15rem; background: white; border: none; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+            color: #1e1b4b;
+        }
+        .accordion-body { padding: 0 30px 24px; color: #334155; display: none; }
+        .accordion-item.active .accordion-body { display: block; }
+        .accordion-icon { font-size: 1.8rem; transition: 0.3s; color: #4f46e5; }
+        .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+
+        /* TEACHER */
+        .teacher-block {
+            display: flex; flex-wrap: wrap; align-items: center; gap: 48px;
+            background: white; border-radius: 40px; padding: 56px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.04); margin-top: 20px;
+        }
+        .teacher-avatar {
+            width: 180px; height: 180px; border-radius: 50%; overflow: hidden;
+            flex-shrink: 0;
+        }
+        .teacher-avatar img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+        }
+        .teacher-info h3 { font-size: 2.2rem; margin-bottom: 8px; color: #0b0b1a; }
+
+        /* RESULTS */
+        .check-list {
+            list-style: none; max-width: 600px; margin: 0 auto;
+            display: grid; gap: 16px;
+        }
+        .check-list li {
+            background: white; padding: 16px 24px; border-radius: 16px;
+            display: flex; align-items: center; gap: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            font-size: 1.1rem;
+        }
+        .check-list li::before {
+            content: '✅'; font-size: 1.4rem; flex-shrink: 0;
+        }
+
+        /* PRICE */
+        .price-section {
+            background: radial-gradient(circle at 80% 10%, #1e1730, #0b0914);
+            border-radius: 48px; padding: 70px 48px; color: white;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .price-section::before {
+            content: ''; position: absolute; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, transparent 70%);
+            top: -120px; right: -80px;
+        }
+        .price {
+            font-size: 4rem; font-weight: 800; margin: 20px 0;
+            position: relative; z-index: 2;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .seats { font-size: 1.1rem; color: #cbd5e1; margin: 16px 0 24px; }
+        .seats span { font-weight: 700; color: #fbbf24; }
+
+        /* FORM */
+        .contact-form {
+            max-width: 500px; margin: 0 auto; text-align: left;
+        }
+        .contact-form input {
+            width: 100%; padding: 14px 18px; margin-bottom: 16px;
+            border-radius: 12px; border: 1px solid #93c5fd;
+            background: rgba(255,255,255,0.9); font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .contact-form button {
+            width: 100%; padding: 16px; font-size: 1.1rem; font-weight: 600;
+            border-radius: 12px; border: none; cursor: pointer;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #1e1b4b; transition: 0.3s;
+        }
+        .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(251,191,36,0.4); }
+
+        /* GAME DAY */
+        .gameday-block {
+            background: white; border-radius: 32px; padding: 40px 28px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.03); display: inline-block;
+            max-width: 500px; margin: 0 auto;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white; border-radius: 20px; margin-bottom: 14px;
+            padding: 20px 26px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .faq-question { font-weight: 600; display: flex; justify-content: space-between; color: #1e1b4b; }
+        .faq-answer { margin-top: 10px; display: none; color: #334155; }
+        .faq-item.open .faq-answer { display: block; }
+
+        footer { text-align: center; padding: 50px 24px; color: #64748b; font-size: 0.95rem; }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(35px); } to { opacity: 1; transform: translateY(0); } }
+        .animate { animation: fadeUp 0.8s ease backwards; }
+
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 100px 0 60px; }
+            .teacher-block { padding: 36px; flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content animate">
+            <div class="hero-badge">🚀 Старт 2 июля — 10 мест в группе</div>
+            <h1>Английский для IT:<br><span>Speak & Get Hired</span></h1>
+            <p>Интенсив с личной проверкой от Владислава. Подготовьтесь к собеседованию, начните уверенно говорить на дейликах и получите оффер мечты.</p>
+            <a href="#contact" class="btn">Записаться →</a>
+        </div>
+        <div class="hero-visual animate">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2360a5fa'/%3E%3Cstop offset='100%25' style='stop-color:%234f46e5'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='100%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f59e0b'/%3E%3Cstop offset='100%25' style='stop-color:%23fbbf24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='%23111827' rx='32'/%3E%3Ccircle cx='380' cy='80' r='70' fill='url(%23g1)' opacity='0.35'/%3E%3Ccircle cx='100' cy='300' r='90' fill='url(%23g2)' opacity='0.4'/%3E%3Ccircle cx='250' cy='200' r='130' fill='url(%23g1)' opacity='0.2'/%3E%3Cpolygon points='250,120 330,200 250,280 170,200' fill='%231a1a2e' stroke='%2360a5fa' stroke-width='4'/%3E%3Cpolygon points='250,160 310,200 250,240 190,200' fill='none' stroke='%23fbbf24' stroke-width='3'/%3E%3Cline x1='250' y1='120' x2='250' y2='80' stroke='%23fbbf24' stroke-width='3'/%3E%3Cline x1='330' y1='200' x2='420' y2='140' stroke='%2360a5fa' stroke-width='3'/%3E%3Cline x1='170' y1='200' x2='80' y2='140' stroke='%2360a5fa' stroke-width='3'/%3E%3Ccircle cx='250' cy='200' r='12' fill='%23fbbf24'/%3E%3C/svg%3E" alt="Tech illustration">
+        </div>
+    </div>
+</section>
+
+<!-- Для кого -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Для кого этот курс</h2>
+        <p class="section-subtitle">Вы получите результат, даже если раньше боялись говорить</p>
+        <div class="grid-3">
+            <div class="card animate"><div class="card-icon">💻</div><h3>Разработчикам</h3><p>Научитесь презентовать проекты, проходить technical interview и вести code review на английском.</p></div>
+            <div class="card animate"><div class="card-icon">🧪</div><h3>QA-инженерам</h3><p>Уверенно описывайте баги, обсуждайте тест-кейсы и демонстрируйте софт-скиллы на интервью.</p></div>
+            <div class="card animate"><div class="card-icon">📊</div><h3>Аналитикам и PM</h3><p>Освойте деловую переписку, daily stand-ups и переговоры с заказчиками без языкового барьера.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Как проходит обучение -->
+<section style="background: #f0f4ff;">
+    <div class="container">
+        <h2 class="section-title">Как проходит обучение</h2>
+        <div class="steps-grid">
+            <div class="step-card animate"><div class="step-number">1</div><h3>Вебинары по вечерам</h3><p>Дважды в неделю живые занятия в Zoom: разбираем реальные кейсы, задаёте вопросы голосом.</p></div>
+            <div class="step-card animate"><div class="step-number">2</div><h3>Домашние задания с проверкой</h3><p>Пишете резюме, cover letter, готовите самопрезентацию — всё проверяю лично и даю обратную связь.</p></div>
+            <div class="step-card animate"><div class="step-number">3</div><h3>Закрытый чат в Max</h3><p>Поддержка между занятиями: голосовые, тексты, скрипты. Вы не одни — группа мотивирует идти до конца.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Программа -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Программа интенсива</h2>
+        <p class="section-subtitle">4 недели от резюме до пробного собеседования</p>
+        <div class="accordion">
+            <div class="accordion-item active"><button class="accordion-header">Неделя 1 · Резюме и первое впечатление <span class="accordion-icon">+</span></button><div class="accordion-body">Создаём IT-резюме и cover letter. Учимся отвечать на типовые вопросы HR, используя сильные глаголы и цифры.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 2 · Расскажи о своих проектах <span class="accordion-icon">+</span></button><div class="accordion-body">Описываем архитектуру, технологии, свою роль. Практикуем behavioural questions и защиту проектов.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 3 · Технический диалог и daily English <span class="accordion-icon">+</span></button><div class="accordion-body">Практикуем code review, обсуждение задач, участие в митингах. Избавляемся от страха говорить.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 4 · Mock-интервью и питч продукта <span class="accordion-icon">+</span></button><div class="accordion-body">Полноценное пробное собеседование с детальным фидбеком. Дипломный проект «Питч своего стартапа». Сертификат.</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Преподаватель -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Кто ведёт курс</h2>
+        <div class="teacher-block animate">
+            <div class="teacher-avatar">
+                <img src="https://i127.fastpic.org/big/2026/0505/ae/653d24f3e1d7a7c1d85582b5b58406ae.jpg" alt="Владислав — преподаватель">
+            </div>
+            <div class="teacher-info">
+                <span style="background:#e0e7ff; color:#4338ca; padding:8px 20px; border-radius:32px; font-size:0.9rem; font-weight:500; display:inline-block; margin-bottom:16px;">Дипломированный педагог</span>
+                <h3>Владислав</h3>
+                <p>Более 8 лет преподавания английского взрослым. Специализация — IT English и подготовка к собеседованиям. Мои выпускники работают в Google, Microsoft, Revolut. Я превращаю языковой барьер в карьерный трамплин.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Результаты -->
+<section style="background: #ffffff;">
+    <div class="container">
+        <h2 class="section-title">Ваш результат через 4 недели</h2>
+        <ul class="check-list animate">
+            <li>Готовое IT-резюме на английском, прошедшее проверку</li>
+            <li>Уверенные ответы на типовые и каверзные вопросы HR</li>
+            <li>Навык презентации своего проекта и код-ревью на английском</li>
+            <li>Скрипты для daily meeting и переписки в Slack/Teams</li>
+            <li>Пробное собеседование с обратной связью и план действий</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Бесплатный Game Day (можно убрать, если не нужно) -->
+<section style="background: #f0f4ff;">
+    <div class="container" style="text-align:center;">
+        <h2 class="section-title">🎮 Бесплатный Demo Day</h2>
+        <p style="font-size:1.2rem; color:#475569; margin-bottom:40px;">Живая встреча с Владиславом перед стартом: разбор резюме, лайфхаки для собеседований, знакомство с форматом</p>
+        <div class="gameday-block">
+            <p style="font-weight:600; color:#1e1b4b; margin-bottom:12px;">📅 30 июня (понедельник) в 19:00 МСК</p>
+            <p style="margin-bottom:20px;">Бесплатно, нужен только Zoom.</p>
+            <a href="#contact" class="btn">Записаться на Demo Day →</a>
+        </div>
+    </div>
+</section>
+
+<!-- Тарифы и CTA -->
+<section id="contact">
+    <div class="container">
+        <div class="price-section animate">
+            <h2 style="font-size:2.5rem; font-weight:700; position:relative; z-index:2; margin-bottom: 40px;">Тарифы курса</h2>
+
+            <!-- Тариф 1: Базовый -->
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 28px; padding: 36px 28px; margin: 30px 0; position:relative; z-index:2; border: 1px solid rgba(255,255,255,0.15);">
+                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">💻 Тариф «IT-Intensive»</h3>
+                <div class="price">7 900 <small style="font-size:1.3rem;">₽</small></div>
+                <p style="opacity:0.9; margin-bottom:24px;">единовременно за 4 недели</p>
+                <div class="seats"><span>🔥 Осталось 10 мест</span> в группе</div>
+                <ul style="list-style:none; text-align:left; max-width:320px; margin:0 auto 28px; line-height:2.2; color:#cbd5e1;">
+                    <li>✅ 8 живых вебинаров</li>
+                    <li>✅ Проверка всех домашних заданий</li>
+                    <li>✅ Закрытый чат в Max</li>
+                    <li>✅ Записи занятий и шаблоны</li>
+                    <li>✅ Сертификат о прохождении</li>
+                </ul>
+                <a href="https://max.ru/join/YOUR_MAX_LINK" class="btn" style="background:white; color:#1e1b4b; box-shadow:0 12px 28px rgba(255,255,255,0.2); margin:0 auto 12px;">Написать в Max →</a>
+                <div class="contact-form" style="margin-top:16px;">
+                    <form action="https://formspree.io/f/mlgzbznd" method="POST">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                        <button type="submit">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Тариф 2: Pro -->
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 28px; padding: 36px 28px; margin: 30px 0; position:relative; z-index:2; border: 1px solid rgba(255,255,255,0.15);">
+                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">⭐ Тариф «Interview Pro»</h3>
+                <div class="price">12 900 <small style="font-size:1.3rem;">₽</small></div>
+                <p style="opacity:0.9; margin-bottom:24px;">единовременно за 4 недели</p>
+                <div class="seats"><span>🎯 Всего 5 мест</span> — максимум внимания</div>
+                <ul style="list-style:none; text-align:left; max-width:320px; margin:0 auto 28px; line-height:2.2; color:#cbd5e1;">
+                    <li>✅ Всё из тарифа «IT-Intensive»</li>
+                    <li>✅ 2 индивидуальные 30-минутные сессии с Владиславом (mock-интервью + разбор ошибок)</li>
+                    <li style="color:#fcd34d; font-weight:500;">✨ Приоритетная проверка домашек</li>
+                </ul>
+                <a href="https://max.ru/join/YOUR_MAX_LINK" class="btn" style="background:white; color:#1e1b4b; box-shadow:0 12px 28px rgba(255,255,255,0.2); margin:0 auto 12px;">Спросить про Pro →</a>
+                <div class="contact-form" style="margin-top:16px;">
+                    <form action="https://formspree.io/f/mlgzbznd" method="POST">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                        <button type="submit">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Частые вопросы</h2>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-question">Какой уровень английского нужен? <span>+</span></div>
+            <div class="faq-answer">Курс рассчитан на уровни A2-B1. Если вы можете читать документацию, но боитесь говорить — вы подходите идеально.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-question">Что делать, если пропустил вебинар? <span>+</span></div>
+            <div class="faq-answer">Все записи сохраняются в закрытом канале. Вы можете посмотреть их в любое удобное время.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-question">Можно ли вернуть деньги? <span>+</span></div>
+            <div class="faq-answer">Да, в течение первых 7 дней после старта, если вы посетили не более одного вебинара.</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2025 English for IT. Владислав и команда.</p>
+    </div>
+</footer>
+
+<script>
+    // Accordion
+    document.querySelectorAll('.accordion-header').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+
+    // Animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('animate');
+        });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.card, .teacher-block, .price-section, .step-card, .check-list').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
