@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Kids: Play & Speak — живой английский с экспертом ЕГЭ</title>
+    <title>English Kids & Teens — премиум-курсы английского с Владиславом</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #faf9ff;
-            color: #0b0b1a;
+            color: #1a1025;
             line-height: 1.5;
             overflow-x: hidden;
         }
@@ -33,7 +33,7 @@
             content: '';
             position: absolute;
             width: 800px; height: 800px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
             top: -300px; left: -150px;
             animation: float 12s infinite alternate ease-in-out;
         }
@@ -41,7 +41,7 @@
             content: '';
             position: absolute;
             width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
             bottom: -250px; right: -100px;
             animation: float 15s infinite alternate-reverse ease-in-out;
         }
@@ -72,7 +72,7 @@
             animation: fadeInUp 0.8s ease backwards 0.2s;
         }
         .hero h1 span {
-            background: linear-gradient(135deg, #d8b4fe, #c084fc, #f97316);
+            background: linear-gradient(135deg, #d8b4fe, #c084fc, #fbbf24);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             animation: gradientShift 3s ease infinite alternate;
             background-size: 200% 200%;
@@ -116,7 +116,7 @@
         }
         .hero-visual img { max-width: 100%; border-radius: 32px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
 
-        /* SECTIONS — единый светлый фон */
+        /* SECTIONS */
         section { padding: 100px 0; background: #faf9ff; }
         .section-title {
             font-size: 2.8rem; font-weight: 700; text-align: center;
@@ -125,6 +125,14 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .section-subtitle { text-align: center; font-size: 1.15rem; color: #575279; margin-bottom: 60px; }
+
+        /* ICONS */
+        .icon-circle {
+            width: 64px; height: 64px; border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 22px;
+            background: linear-gradient(135deg, #f3e8ff, #ede0ff);
+        }
 
         /* CARDS */
         .grid-3 {
@@ -139,13 +147,6 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 30px 45px rgba(0,0,0,0.06), 0 0 30px rgba(147,51,234,0.1); }
-        .card-icon {
-            width: 64px; height: 64px; background: #f3e8ff; border-radius: 20px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2.2rem; margin-bottom: 22px;
-            transition: transform 0.3s;
-        }
-        .card:hover .card-icon { transform: rotate(-5deg) scale(1.1); }
         .card h3 { font-size: 1.4rem; margin-bottom: 10px; font-weight: 600; color: #3b0764; }
 
         /* STEPS */
@@ -160,7 +161,8 @@
         }
         .step-card:hover { transform: translateY(-8px); box-shadow: 0 25px 40px rgba(0,0,0,0.08); }
         .step-number {
-            width: 48px; height: 48px; background: #f3e8ff; border-radius: 50%;
+            width: 48px; height: 48px; background: linear-gradient(135deg, #f3e8ff, #ede0ff);
+            border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 20px; font-weight: 700; font-size: 1.4rem;
             color: #a21caf;
@@ -169,7 +171,7 @@
         .step-card:hover .step-number { transform: scale(1.2); }
 
         /* ACCORDION */
-        .accordion { max-width: 860px; margin: 0 auto; }
+        .accordion { max-width: 860px; margin: 0 auto 40px; }
         .accordion-item {
             background: white; border-radius: 24px; margin-bottom: 16px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.02); overflow: hidden;
@@ -234,7 +236,7 @@
         .testimonial p { font-style: italic; margin-bottom: 18px; color: #2d2a4a; }
         .author { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #4a1d96; }
 
-        /* PRICE SECTION — тёмный блок */
+        /* PRICE SECTION */
         .price-section-outer {
             background: radial-gradient(circle at 80% 10%, #2e1065, #110324);
             border-radius: 48px; padding: 70px 48px; color: white;
@@ -314,25 +316,72 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-badge">🎓 Эксперт ЕГЭ · 15+ лет в школах Москвы</div>
-            <h1>Английский для детей:<br><span>Play & Speak</span></h1>
-            <p>Живые занятия с Владиславом — опытным педагогом, который подготовил сотни учеников к ЕГЭ и ОГЭ. Теперь помогает детям 6–11 лет полюбить английский через игры и песни.</p>
-            <a href="#contact" class="btn">Записать ребёнка →</a>
+            <h1>Английский для детей<br><span>6–16 лет</span></h1>
+            <p>Живые занятия с Владиславом — опытным педагогом, который подготовил сотни учеников к ОГЭ и ЕГЭ. Игровой английский для малышей и результативная подготовка для подростков.</p>
+            <a href="#contact" class="btn">Записаться →</a>
         </div>
         <div class="hero-visual">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23d8b4fe'/%3E%3Cstop offset='100%25' style='stop-color:%23a21caf'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='100%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fb923c'/%3E%3Cstop offset='100%25' style='stop-color:%23fcd34d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='%231f0940' rx='32'/%3E%3Ccircle cx='380' cy='80' r='70' fill='url(%23g1)' opacity='0.35'/%3E%3Ccircle cx='100' cy='300' r='90' fill='url(%23g2)' opacity='0.4'/%3E%3Ccircle cx='250' cy='200' r='130' fill='url(%23g1)' opacity='0.15'/%3E%3Cpolygon points='250,120 330,200 250,280 170,200' fill='%23260f44' stroke='%23d8b4fe' stroke-width='4'/%3E%3Cpolygon points='250,160 310,200 250,240 190,200' fill='none' stroke='%23fb923c' stroke-width='3'/%3E%3Cline x1='250' y1='120' x2='250' y2='80' stroke='%23fcd34d' stroke-width='3'/%3E%3Cline x1='330' y1='200' x2='420' y2='140' stroke='%23d8b4fe' stroke-width='3'/%3E%3Cline x1='170' y1='200' x2='80' y2='140' stroke='%23d8b4fe' stroke-width='3'/%3E%3Ccircle cx='250' cy='200' r='12' fill='%23fcd34d'/%3E%3C/svg%3E" alt="Play and Speak">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23d8b4fe'/%3E%3Cstop offset='100%25' style='stop-color:%23a21caf'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='100%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fb923c'/%3E%3Cstop offset='100%25' style='stop-color:%23fcd34d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='%231f0940' rx='32'/%3E%3Ccircle cx='380' cy='80' r='70' fill='url(%23g1)' opacity='0.35'/%3E%3Ccircle cx='100' cy='300' r='90' fill='url(%23g2)' opacity='0.4'/%3E%3Ccircle cx='250' cy='200' r='130' fill='url(%23g1)' opacity='0.15'/%3E%3Cpolygon points='250,120 330,200 250,280 170,200' fill='%23260f44' stroke='%23d8b4fe' stroke-width='4'/%3E%3Cpolygon points='250,160 310,200 250,240 190,200' fill='none' stroke='%23fb923c' stroke-width='3'/%3E%3Cline x1='250' y1='120' x2='250' y2='80' stroke='%23fcd34d' stroke-width='3'/%3E%3Cline x1='330' y1='200' x2='420' y2='140' stroke='%23d8b4fe' stroke-width='3'/%3E%3Cline x1='170' y1='200' x2='80' y2='140' stroke='%23d8b4fe' stroke-width='3'/%3E%3Ccircle cx='250' cy='200' r='12' fill='%23fcd34d'/%3E%3C/svg%3E" alt="English for kids and teens">
         </div>
     </div>
 </section>
 
-<!-- Для кого -->
+<!-- Для кого (6 карточек, без эмодзи) -->
 <section>
     <div class="container">
         <h2 class="section-title">Кому подойдёт курс</h2>
-        <p class="section-subtitle">Дети 6–11 лет, которые хотят заговорить на английском — без зубрёжки и стресса</p>
-        <div class="grid-3">
-            <div class="card animate"><div class="card-icon">🧒</div><h3>Начинающим</h3><p>Ребёнок только знакомится с языком — через песни, игры и простые фразы начнём уверенно говорить.</p></div>
-            <div class="card animate"><div class="card-icon">📚</div><h3>Тем, кто хочет догнать школьную программу</h3><p>Поможем разобраться в грамматике без слёз, улучшим чтение и пополним словарный запас.</p></div>
-            <div class="card animate"><div class="card-icon">🌍</div><h3>Будущим путешественникам</h3><p>Ребёнок научится заказывать еду, знакомиться и общаться на отдыхе — живой разговорный английский.</p></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+            <!-- Kids -->
+            <div style="flex: 1 1 280px;">
+                <h3 style="font-size:1.8rem; font-weight:700; color:#3b0764; margin-bottom:20px;">🎈 6–11 лет</h3>
+                <div class="card">
+                    <div class="icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9.5" r="1.5" fill="#7c3aed"/><circle cx="15" cy="9.5" r="1.5" fill="#7c3aed"/></svg>
+                    </div>
+                    <h3>Начинающим</h3>
+                    <p>Ребёнок только знакомится с языком — через песни, игры и простые фразы начнём уверенно говорить.</p>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <div class="icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M4 10h16"/></svg>
+                    </div>
+                    <h3>Помощь со школой</h3>
+                    <p>Догоним программу, разберём грамматику без слёз, улучшим чтение.</p>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <div class="icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                    </div>
+                    <h3>Юным путешественникам</h3>
+                    <p>Научим заказывать еду, знакомиться и общаться на отдыхе — живой разговорный английский.</p>
+                </div>
+            </div>
+
+            <!-- Teens -->
+            <div style="flex: 1 1 280px;">
+                <h3 style="font-size:1.8rem; font-weight:700; color:#3b0764; margin-bottom:20px;">🚀 12–16 лет</h3>
+                <div class="card">
+                    <div class="icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg>
+                    </div>
+                    <h3>С нуля</h3>
+                    <p>Подросток не знал английского? Быстро поставим произношение, научим читать и говорить.</p>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <div class="icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/></svg>
+                    </div>
+                    <h3>Подготовка к ОГЭ / ЕГЭ</h3>
+                    <p>Разбор структуры экзамена, стратегии выполнения, практика на реальных заданиях.</p>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <div class="icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M21 15v-4a2 2 0 0 0-2-2h-6l-3-3H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10"/><path d="M16 18l3-3-3-3"/><path d="M19 15h-7"/></svg>
+                    </div>
+                    <h3>Разговорный для учёбы за рубежом</h3>
+                    <p>Прокачаем speaking, аудирование, научим писать эссе и презентовать проекты.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -342,23 +391,35 @@
     <div class="container">
         <h2 class="section-title">Как проходят занятия</h2>
         <div class="steps-grid">
-            <div class="step-card animate"><div class="step-number">1</div><h3>Игровой вебинар</h3><p>Дважды в неделю встречаемся в Zoom: игры, песни, рисование. Никаких скучных правил — только живое общение.</p></div>
-            <div class="step-card animate"><div class="step-number">2</div><h3>Творческая домашка</h3><p>Рисунок, поделка, голосовое сообщение — задания, которые ребёнок делает с удовольствием и получает личную проверку.</p></div>
-            <div class="step-card animate"><div class="step-number">3</div><h3>Чат Max</h3><p>Закрытый детский чат для общения между занятиями: голосовые, стикеры, мини-игры и поддержка преподавателя.</p></div>
+            <div class="step-card animate"><div class="step-number">1</div><h3>Живой вебинар</h3><p>Дважды в неделю в Zoom: игры, дискуссии, проекты — без скучных лекций.</p></div>
+            <div class="step-card animate"><div class="step-number">2</div><h3>Практика с проверкой</h3><p>Домашнее задание с персональной обратной связью. Для подростков — дополнительные тесты ОГЭ/ЕГЭ.</p></div>
+            <div class="step-card animate"><div class="step-number">3</div><h3>Чат Max</h3><p>Закрытое сообщество в мессенджере Max: поддержка, голосовые, мини-игры и ответы на вопросы.</p></div>
         </div>
     </div>
 </section>
 
-<!-- Программа -->
+<!-- Программа Kids -->
 <section>
     <div class="container">
-        <h2 class="section-title">Программа курса</h2>
-        <p class="section-subtitle">4 недели увлекательного английского без напряжения</p>
+        <h2 class="section-title">Программа «Play & Speak» (6–11 лет)</h2>
         <div class="accordion">
             <div class="accordion-item active"><button class="accordion-header">Неделя 1 · Давай знакомиться! <span class="accordion-icon">+</span></button><div class="accordion-body">Приветствия, цвета, цифры, эмоции. Учимся рассказывать о себе и задавать вопросы.</div></div>
             <div class="accordion-item"><button class="accordion-header">Неделя 2 · Моя семья и дом <span class="accordion-icon">+</span></button><div class="accordion-body">Лексика по темам, ролевые игры «В гостях», описываем свою комнату и питомцев.</div></div>
             <div class="accordion-item"><button class="accordion-header">Неделя 3 · Школа и хобби <span class="accordion-icon">+</span></button><div class="accordion-body">Рассказываем о любимых предметах, хобби и друзьях. Играем в диалоги «В школе».</div></div>
-            <div class="accordion-item"><button class="accordion-header">Неделя 4 · Праздник и спектакль <span class="accordion-icon">+</span></button><div class="accordion-body">Готовим мини-постановку, повторяем всё, что прошли. Финальный праздник с сертификатами и сюрпризом.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 4 · Праздник и спектакль <span class="accordion-icon">+</span></button><div class="accordion-body">Готовим мини-постановку, повторяем всё, что прошли. Финальный праздник с сертификатами.</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Программа Teens -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Программа «Speak Up» (12–16 лет)</h2>
+        <div class="accordion">
+            <div class="accordion-item active"><button class="accordion-header">Неделя 1 · About Me & My World <span class="accordion-icon">+</span></button><div class="accordion-body">Самопрезентация, рассказ о себе, своих увлечениях и планах. Лексика: хобби, семья, друзья.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 2 · School & Future Plans <span class="accordion-icon">+</span></button><div class="accordion-body">Обсуждаем школьные предметы, экзамены, выбор профессии. Учимся писать эссе и аргументировать.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 3 · Media & Technology <span class="accordion-icon">+</span></button><div class="accordion-body">Социальные сети, гаджеты, блогинг. Развиваем навыки дискуссии и аудирования.</div></div>
+            <div class="accordion-item"><button class="accordion-header">Неделя 4 · Speaking Challenge & Mock Exam <span class="accordion-icon">+</span></button><div class="accordion-body">Пробный экзамен (ОГЭ/ЕГЭ устная часть), работа над ошибками, стратегии высокого балла.</div></div>
         </div>
     </div>
 </section>
@@ -375,13 +436,13 @@
             <div class="teacher-info">
                 <span style="background:#f3e8ff; color:#9333ea; padding:8px 20px; border-radius:32px; font-size:0.9rem; font-weight:500; display:inline-block; margin-bottom:16px;">Эксперт ЕГЭ · 15 лет в школе</span>
                 <h3>Владислав</h3>
-                <p>Более 15 лет преподаю английский в московских школах. Подготовил к ЕГЭ и ОГЭ более 500 учеников: средний балл — 85, каждый третий сдаёт на 90+. Мои выпускники поступают в ведущие вузы. Но самое большое счастье — видеть, как загораются глаза у малышей, когда они говорят первые фразы на английском. Для детей 6–11 лет я создал специальный курс Play & Speak, где серьёзный опыт превращается в весёлую игру.</p>
+                <p>Более 15 лет преподаю английский в московских школах. Подготовил к ЕГЭ и ОГЭ более 500 учеников: средний балл — 85, каждый третий сдаёт на 90+. Мои выпускники поступают в ведущие вузы. Но самое большое счастье — видеть, как загораются глаза у малышей, когда они говорят первые фразы на английском. Для детей 6–11 лет я создал специальный курс Play & Speak, а для подростков — Speak Up, где серьёзный опыт превращается в уверенность на экзамене и в жизни.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Результаты учеников -->
+<!-- Статистика -->
 <section>
     <div class="container">
         <h2 class="section-title">Результаты учеников</h2>
@@ -400,34 +461,34 @@
         <h2 class="section-title">Что говорят родители</h2>
         <div class="testimonial-grid">
             <div class="testimonial animate">
-                <p>«Владислав готовил моего сына к ЕГЭ. Сдали на 92 балла! Очень системный подход и при этом душевный контакт с учеником. Теперь младшая дочь с удовольствием ходит на его игровые уроки».</p>
+                <p>«Владислав готовил сына к ЕГЭ. Сдали на 92 балла! Очень системный подход. Младшая дочь теперь с удовольствием ходит на игровые уроки».</p>
                 <div class="author">👤 Анна, мама Артёма (11 класс) и Василисы (8 лет)</div>
             </div>
             <div class="testimonial animate">
-                <p>«Дочь боялась английского, а после курса Play & Speak сама просит включить песенки и пытается говорить. Владислав — педагог от Бога. А главное, он сумел заинтересовать ребёнка без давления».</p>
+                <p>«Дочь боялась английского, а после курса сама просит включить песенки. Владислав — педагог от Бога. Сумел заинтересовать без давления».</p>
                 <div class="author">👤 Ольга, мама Алисы (7 лет)</div>
             </div>
             <div class="testimonial animate">
-                <p>«Старший сдал ОГЭ на 5, сейчас готовимся к ЕГЭ. Уверена, что результат будет отличный. Очень рада, что теперь и младший может учиться у Владислава с раннего возраста».</p>
+                <p>«Старший сдал ОГЭ на 5, сейчас готовимся к ЕГЭ. Очень рада, что теперь и младший может учиться у Владислава с раннего возраста».</p>
                 <div class="author">👤 Ирина, мама Егора (9 класс) и Миши (6 лет)</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Game Day с формой без телефона -->
+<!-- Game Day -->
 <section>
     <div class="container" style="text-align:center;">
         <h2 class="section-title">🎮 Бесплатный Game Day</h2>
-        <p style="font-size:1.2rem; color:#575279; margin-bottom:40px;">Живая встреча с Владиславом перед стартом: игры, песни, знакомство</p>
+        <p style="font-size:1.2rem; color:#575279; margin-bottom:40px;">Живая встреча с Владиславом перед стартом: игры, знакомство, ответы на вопросы</p>
         <div class="gameday-block">
             <p style="font-weight:600; color:#3b0764; margin-bottom:12px;">📅 30 июня (понедельник) в 18:00 МСК</p>
-            <p style="margin-bottom:20px;">Для детей 6–11 лет. Бесплатно, нужен только Zoom.</p>
+            <p style="margin-bottom:20px;">Для детей 6–16 лет. Бесплатно, нужен только Zoom.</p>
             <div class="contact-form">
                 <form action="https://formspree.io/f/mlgzbznd" method="POST">
                     <input type="hidden" name="form_type" value="gameday">
                     <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="text" name="question" placeholder="Вопрос или пожелание (необязательно)">
+                    <input type="text" name="age" placeholder="Возраст ребёнка">
                     <button type="submit">Записаться на Game Day</button>
                 </form>
             </div>
@@ -435,11 +496,11 @@
     </div>
 </section>
 
-<!-- Тарифы и CTA -->
+<!-- Тарифы -->
 <section id="contact">
     <div class="container">
         <div class="price-section-outer animate">
-            <h2 style="font-size:2.5rem; font-weight:700; position:relative; z-index:2; margin-bottom: 20px;">Тарифы курса</h2>
+            <h2 style="font-size:2.5rem; font-weight:700; position:relative; z-index:2; margin-bottom: 20px;">Тарифы</h2>
 
             <div style="position:relative; z-index:2; margin-bottom: 30px;">
                 <p style="color:#e9d5ff; margin-bottom: 12px; font-size:1rem;">📩 Не хотите оставлять данные? Просто напишите мне в Max</p>
@@ -448,69 +509,66 @@
                 </a>
             </div>
 
-            <!-- Тариф 1 -->
+            <!-- Kids -->
             <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 28px; padding: 36px 28px; margin: 30px 0; position:relative; z-index:2; border: 1px solid rgba(255,255,255,0.15);">
-                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">🎈 Тариф «Игровой»</h3>
+                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">🎈 «Play & Speak» (6–11 лет)</h3>
                 <div class="price">4 900 <small style="font-size:1.3rem;">₽</small></div>
-                <p style="opacity:0.9; margin-bottom:24px;">единовременно за 4 недели</p>
-                <div class="seats"><span>🔥 Осталось 8 мест</span> в группе</div>
+                <p style="opacity:0.9; margin-bottom:24px;">4 недели, 8 занятий</p>
+                <div class="seats"><span>🔥 Осталось 8 мест</span></div>
                 <ul style="list-style:none; text-align:left; max-width:320px; margin:0 auto 28px; line-height:2.2; color:#e9d5ff;">
                     <li>✅ 8 живых игровых вебинаров</li>
-                    <li>✅ Творческие домашки с личной проверкой</li>
+                    <li>✅ Творческие домашки с проверкой</li>
                     <li>✅ Закрытый чат в Max</li>
-                    <li>✅ Записи всех занятий</li>
-                    <li>✅ Сертификат и подарок в конце курса</li>
+                    <li>✅ Сертификат и подарок</li>
                 </ul>
                 <div class="contact-form" style="margin-top:16px;">
                     <form action="https://formspree.io/f/mlgzbznd" method="POST">
-                        <input type="hidden" name="form_type" value="tariff_game">
+                        <input type="hidden" name="form_type" value="tariff_kids">
                         <input type="text" name="name" placeholder="Ваше имя" required>
-                        <input type="text" name="question" placeholder="Ваш вопрос (необязательно)">
-                        <p style="color:#d8b4fe; font-size:0.8rem; margin-bottom:12px; text-align:center;">Я свяжусь с вами в Max или по email</p>
+                        <input type="text" name="age" placeholder="Возраст ребёнка">
                         <button type="submit">Оставить заявку</button>
                     </form>
                 </div>
             </div>
 
-            <!-- Тариф 2 -->
+            <!-- Teens -->
             <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 28px; padding: 36px 28px; margin: 30px 0; position:relative; z-index:2; border: 1px solid rgba(255,255,255,0.15);">
-                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">⭐ Тариф «Play & Speak Pro»</h3>
-                <div class="price">7 900 <small style="font-size:1.3rem;">₽</small></div>
-                <p style="opacity:0.9; margin-bottom:24px;">единовременно за 4 недели</p>
-                <div class="seats"><span>🎯 Всего 2 места</span> — максимум внимания</div>
-                <ul style="list-style:none; text-align:left; max-width:320px; margin:0 auto 28px; line-height:2.2; color:#e9d5ff;">
-                    <li>✅ Всё из тарифа «Игровой»</li>
-                    <li style="color:#fcd34d; font-weight:500;">✨ 2 индивидуальные 20-минутные игровые сессии с Владиславом</li>
-                </ul>
-                <div class="contact-form" style="margin-top:16px;">
-                    <form action="https://formspree.io/f/mlgzbznd" method="POST">
-                        <input type="hidden" name="form_type" value="tariff_pro">
-                        <input type="text" name="name" placeholder="Ваше имя" required>
-                        <input type="text" name="question" placeholder="Ваш вопрос (необязательно)">
-                        <p style="color:#d8b4fe; font-size:0.8rem; margin-bottom:12px; text-align:center;">Я отвечу в Max или на почту</p>
-                        <button type="submit">Оставить заявку</button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Тариф 3 -->
-            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 28px; padding: 36px 28px; margin: 30px 0; position:relative; z-index:2; border: 1px solid rgba(255,255,255,0.15);">
-                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">👑 Тариф «Персональный»</h3>
+                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">🚀 «Speak Up» (12–16 лет)</h3>
                 <div class="price">5 900 <small style="font-size:1.3rem;">₽</small></div>
-                <p style="opacity:0.9; margin-bottom:24px;">пакет из 4 занятий по 40 минут</p>
-                <div class="seats"><span>🎩 Всего 3 места</span> — индивидуальный график</div>
+                <p style="opacity:0.9; margin-bottom:24px;">4 недели, 8 занятий + пробный экзамен</p>
+                <div class="seats"><span>🔥 Осталось 6 мест</span></div>
                 <ul style="list-style:none; text-align:left; max-width:320px; margin:0 auto 28px; line-height:2.2; color:#e9d5ff;">
-                    <li>✅ 4 живых игровых занятия по 40 минут</li>
+                    <li>✅ 8 живых вебинаров с упором на speaking</li>
+                    <li>✅ Проверка эссе и тестов</li>
+                    <li>✅ Чат Max с поддержкой</li>
+                    <li>✅ Пробный устный экзамен с разбором</li>
+                </ul>
+                <div class="contact-form" style="margin-top:16px;">
+                    <form action="https://formspree.io/f/mlgzbznd" method="POST">
+                        <input type="hidden" name="form_type" value="tariff_teens">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="text" name="age" placeholder="Возраст ребёнка">
+                        <button type="submit">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Personal -->
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 28px; padding: 36px 28px; margin: 30px 0; position:relative; z-index:2; border: 1px solid rgba(255,255,255,0.15);">
+                <h3 style="font-size:2rem; font-weight:700; margin-bottom:10px;">👑 Персональный (ОГЭ/ЕГЭ)</h3>
+                <div class="price">от 7 900 <small style="font-size:1.3rem;">₽</small></div>
+                <p style="opacity:0.9; margin-bottom:24px;">4 индивидуальных занятия по 50 минут</p>
+                <div class="seats"><span>🎩 Всего 3 места</span></div>
+                <ul style="list-style:none; text-align:left; max-width:320px; margin:0 auto 28px; line-height:2.2; color:#e9d5ff;">
                     <li>✅ Полностью под запрос</li>
-                    <li>✅ Персональный план</li>
-                    <li>✅ Обратная связь после каждого урока</li>
+                    <li>✅ Разбор реальных вариантов</li>
+                    <li>✅ Стратегия на высокий балл</li>
                 </ul>
                 <div class="contact-form" style="margin-top:16px;">
                     <form action="https://formspree.io/f/mlgzbznd" method="POST">
                         <input type="hidden" name="form_type" value="tariff_personal">
                         <input type="text" name="name" placeholder="Ваше имя" required>
-                        <input type="text" name="question" placeholder="Удобное время или вопрос">
-                        <p style="color:#d8b4fe; font-size:0.8rem; margin-bottom:12px; text-align:center;">Я свяжусь для уточнения расписания</p>
+                        <input type="text" name="goal" placeholder="Цель (ОГЭ/ЕГЭ)">
                         <button type="submit">Оставить заявку</button>
                     </form>
                 </div>
@@ -522,21 +580,21 @@
 <!-- FAQ -->
 <section>
     <div class="container">
-        <h2 class="section-title">Частые вопросы родителей</h2>
+        <h2 class="section-title">Частые вопросы</h2>
         <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-question">С какого возраста можно участвовать? <span>+</span></div>
-            <div class="faq-answer">Курс рассчитан на детей 6–11 лет. Если вашему ребёнку 5 или 12, напишите мне — подберём группу.</div>
+            <div class="faq-question">Как формируются группы? <span>+</span></div>
+            <div class="faq-answer">Мы подбираем группу по возрасту и уровню: отдельно 6–8 лет, 9–11 лет и подростки 12–14, 14–16 лет.</div>
         </div>
         <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-question">Можно ли вернуть деньги, если курс не подойдёт? <span>+</span></div>
-            <div class="faq-answer">Да, если после первого занятия вы поймёте, что формат не подходит, я полностью верну оплату. Никаких рисков.</div>
+            <div class="faq-question">Можно ли вернуть деньги? <span>+</span></div>
+            <div class="faq-answer">Да, если после первого занятия формат не подойдёт — полностью верну оплату.</div>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <p>© 2025 English Kids. Владислав и команда.</p>
+        <p>© 2025 English Kids & Teens. Владислав и команда.</p>
     </div>
 </footer>
 
@@ -557,7 +615,7 @@
             if (entry.isIntersecting) entry.target.classList.add('animate');
         });
     }, { threshold: 0.2 });
-    document.querySelectorAll('.card, .teacher-block, .price-section-outer, .step-card, .check-list, .stat-card, .testimonial').forEach(el => observer.observe(el));
+    document.querySelectorAll('.card, .teacher-block, .price-section-outer, .step-card, .stat-card, .testimonial').forEach(el => observer.observe(el));
 
     // Counter animation
     const statNumbers = document.querySelectorAll('.stat-number');
